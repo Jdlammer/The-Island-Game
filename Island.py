@@ -3,19 +3,19 @@ import sys
 
 def ask(question):
     answer = input(question + " [y/n]")
-    return answer in ['y', 'Y', 'Yes', 'YES', 'yes']
+    return answer in ['y', 'Y', 'Yes', 'YES', 'yes', 'ye', 'yee']
 
 def delay_print(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.05) #.05
+        time.sleep(0.005) #.05
 
 def super_delay_print(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.25) #.25
+        time.sleep(0.025) #.25
 
 
 health = 100
@@ -34,7 +34,7 @@ while(health > 0):
     print()
     delay_print("You clench a fist and slowly leaks sand between each finger.")
     print()
-    delay_print("You feel your head spinning unsure where you are, although you smell the salty sea air and hear the crushing sounds of the waves as the water creeps up near your feett.")
+    delay_print("You feel your head spinning unsure where you are, although you smell the salty sea air and hear the crushing sounds of the waves as the water creeps up near your feet.")
     print()
     print()
     if ask("Do you try to stand immediately and look around?"):
@@ -60,6 +60,8 @@ while(health > 0):
         garbageBag = 1
     else:
         garbageBag = 0
+    if garbageBag == 1:
+        print("Garbage bag TAKEN")
     print()
     delay_print("You begin to see blurry. Ahhhh. Vision is back a bit, but it's night time and still hard to see.")
     print()
